@@ -10,8 +10,19 @@
 	     SleepIn(false, true) → true
 	     */
         public bool SleepIn(bool weekday, bool vacation)
+
         {
-            return false;
+            if (!weekday || vacation == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
+
+
     }
 }

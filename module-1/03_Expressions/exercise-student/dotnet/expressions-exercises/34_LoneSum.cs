@@ -11,7 +11,28 @@
          */
         public int LoneSum(int a, int b, int c)
         {
-            return 0;
+            int sum = 0;
+            if (a == b && b == c)
+            {
+                return sum;
+            }
+            else if (a != b && b == c)
+            {
+                sum = a;
+                return sum;
+            }
+            else if (a == b && b != c)
+            {
+                sum = c;
+                return sum;
+            }
+            else if (a != b && b != c && a == c)
+            {
+                sum = b;
+                return sum;
+            }
+            sum = a + b + c;
+            return sum;
         }
     }
 }

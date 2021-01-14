@@ -24,7 +24,19 @@
          */
         public string YourCakeAndEatItToo(double mealAmount, bool isBirthday)
         {
-            return "";
+            if (((mealAmount <= 5.00) && (isBirthday)) || ((mealAmount <= 10.00) && (isBirthday == false)))
+            {
+                return "standard";
+            }
+            if (((mealAmount <= 10.00) && (isBirthday)) || ((mealAmount <= 15.00) && (isBirthday == false)))
+            {
+                return "special";
+            }
+            if (((mealAmount > 10.00) && (isBirthday)) || ((mealAmount > 15.00) && (isBirthday == false)))
+            {
+                return "ginormous";
+            }
+                return "";
         }
     }
 }

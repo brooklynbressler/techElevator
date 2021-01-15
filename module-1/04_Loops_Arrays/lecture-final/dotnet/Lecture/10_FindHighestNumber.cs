@@ -10,7 +10,8 @@
         public int FindTheHighestNumber(int[] randomNumbers)
         {
             int highestNumber = randomNumbers[0];
-            int currentValue = 0;
+            int currentValue;
+
             for (int i = 1; i < randomNumbers.Length; i++)
             {
 

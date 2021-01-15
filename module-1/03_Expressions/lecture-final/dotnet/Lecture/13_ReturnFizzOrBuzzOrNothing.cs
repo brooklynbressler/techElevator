@@ -4,29 +4,24 @@
     {
         /*
          13. Write an if/else statement that returns
-            "Fizz" if the parameter is 3,
-            "Buzz" if the parameter is 5
+            x"Fizz" if the parameter is 3,
+            x"Buzz" if the parameter is 5
             and an empty string "" for anything else.
             TOPIC: Conditional Logic
          */
         public string ReturnFizzOrBuzzOrNothing(int number)
         {
-            string output ;
-
-            if (number == 3)
+            if ( number == 3 ) 
             {
-                output = "Fizz";
+                return "Fizz";
             }
-            else if (number == 5)
+            else if ( number == 5 ) {
+                return "Buzz";
+            } else
             {
-                output = "Buzz";
-            }
-            else
-            {
-                output = "";
+                return "";
             }
 
-            return output;
         }
     }
 }

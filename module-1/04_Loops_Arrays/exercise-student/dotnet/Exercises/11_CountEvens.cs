@@ -11,7 +11,20 @@
          */
         public int CountEvens(int[] nums)
         {
-            return 0;
+            //even number counter to keep track of evens 
+            int evenCounter = 0;
+            //iterate through the array
+            for (int i = 0; i < nums.Length; i++)
+            {
+                //if the remainder equals 0 then the value is even 
+                if(nums[i] % 2 == 0)
+                {
+                    //increments the even number counter by 1
+                    evenCounter++;
+                }
+            }
+            //return the amount of times an even number was found 
+            return evenCounter;
         }
     }
 }

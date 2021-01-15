@@ -10,6 +10,10 @@
          */
         public int Sum3(int[] nums)
         {
+            if (nums.Length == 3)
+            {
+                return nums[0] + nums[1] + nums[2];
+            }
             return 0;
         }
     }

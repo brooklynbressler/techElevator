@@ -10,7 +10,15 @@
          */
         public bool Lucky13(int[] nums)
         {
-            return false;
+            //iterate through the int[] arr 
+            for(int i = 0; i< nums.Length; i++)
+            {   //don't need to keep track of 1's and 3's due to the immeadiate return of false if detected
+                if(nums[i] == 1 || nums[i] == 3)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

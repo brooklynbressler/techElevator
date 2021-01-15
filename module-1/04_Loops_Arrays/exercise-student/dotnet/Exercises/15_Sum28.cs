@@ -10,6 +10,23 @@
          */
         public bool Sum28(int[] nums)
         {
+            //the sum of every 2 in the array 
+            int sum = 0;
+            //iterating through the int[] 
+            for (int i = 0; i< nums.Length; i++)
+            {
+                //catches it when the value of the current position is 2
+                if(nums[i] == 2)
+                {
+                    sum += 2;
+                }
+            }
+            //check the final sum
+            if(sum == 8)
+            {
+                return true;
+            }
+
             return false;
         }
     }

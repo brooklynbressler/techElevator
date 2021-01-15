@@ -11,7 +11,22 @@
          */
         public int[] MiddleWay(int[] a, int[] b)
         {
-            return new int[] { };
+            //new array that we're returning later with the middle positions of int[] a and int[] b
+            //put 2 in there so 2 values are in the array also in the notes 
+            int[] newArr = new int[2];
+            //iterate through int[] a and use the index for int[] b as well 
+            //since they're both the same length
+            for(int i = 0; i < a.Length; i++)
+            {
+                //check the index for the middle position 
+                if(i == 1)
+                {
+                  newArr[0] = a[i];
+                  newArr[1] = b[i];
+                }
+            }
+            //return new array
+            return newArr;
         }
     }
 }

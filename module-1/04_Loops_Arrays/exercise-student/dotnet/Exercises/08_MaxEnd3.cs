@@ -11,7 +11,13 @@
          */
         public int[] MaxEnd3(int[] nums)
         {
-            return new int[] { };
+            int largestValue = nums[nums.Length - 1];
+            if (nums[0] > nums[nums.Length - 1])
+            {
+                largestValue = nums[0];
+            }
+            int[] newArr = { largestValue, largestValue, largestValue };
+            return newArr;
         }
     }
 }

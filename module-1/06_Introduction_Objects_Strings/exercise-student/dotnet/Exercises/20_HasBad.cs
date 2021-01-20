@@ -12,7 +12,13 @@
         */
         public bool HasBad(string str)
         {
-            return false;
+            bool flag = false;
+            int index = str.IndexOf("bad");
+            if (index == 0 || index == 1)
+            {
+                flag = true;
+            }
+            return flag;
         }
     }
 }

@@ -10,7 +10,21 @@
         */
         public int CountXX(string str)
         {
-            return 0;
+            int outOfBoundsCheck = str.Length - 1;
+            int count = 0;
+            string comparisonString = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if(i < outOfBoundsCheck)
+                {
+                    comparisonString = str.Substring(i, 2);
+                    if (comparisonString == "xx")
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
         }
     }
 }

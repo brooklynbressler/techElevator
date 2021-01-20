@@ -10,7 +10,17 @@
         */
         public bool EndsLy(string str)
         {
-            return false;
+            bool flag = false;
+        
+            if (str.Length > 1)
+            {
+                string conditionString = str.Substring(str.Length - 2, 2);
+                if (conditionString == "ly")
+                {
+                    flag = true;
+                }
+            }
+            return flag;
         }
     }
 }

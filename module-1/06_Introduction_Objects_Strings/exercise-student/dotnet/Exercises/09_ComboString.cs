@@ -12,6 +12,17 @@
         */
         public string ComboString(string a, string b)
         {
+            int lengthOfA = (a.Length);
+            int lengthOfB = (b.Length);
+
+            if (lengthOfA >= lengthOfB)
+            {
+                return ($"{b}{a}{b}");
+            }
+            if (lengthOfB >= lengthOfA)
+            {
+                return ($"{a}{b}{a}");
+            }
             return null;
         }
     }

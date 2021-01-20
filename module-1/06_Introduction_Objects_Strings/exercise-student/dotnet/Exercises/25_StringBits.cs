@@ -10,7 +10,16 @@
         */
         public string StringBits(string str)
         {
-            return null;
+            string everyOther = "";
+            int everyOtherCounter = 2;
+            for (int i = 0; i < str.Length; i++)
+            {
+                if(i % 2 ==0)
+                {
+                    everyOther += str.Substring(i, 1);
+                }
+            }
+            return everyOther;
         }
     }
 }

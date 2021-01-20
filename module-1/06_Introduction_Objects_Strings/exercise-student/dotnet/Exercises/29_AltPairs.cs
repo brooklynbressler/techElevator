@@ -10,7 +10,39 @@
         */
         public string AltPairs(string str)
         {
-            return null;
+            string answerString = "";
+            int outOfBounds = str.Length - 2;
+            int outOfBoundsByOne = str.Length - 1;
+            answerString = str.Substring(0);
+            int count = 0;
+            if (str.Length >=2) {
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        count = 4;
+                        answerString = str.Substring(i, 2);
+                    }
+                    else if (i <= outOfBounds)
+                    {
+                        if (i == count)
+                        {
+                            count += 4;
+                            answerString += str.Substring(i, 2);
+                        }
+                    }
+                    else if (i == outOfBoundsByOne)
+                    {
+                        if (i == count)
+                        {
+                            count += 4;
+                            answerString += str.Substring(i);
+                        }
+                    }
+                }
+
+            }
+            return answerString;
         }
     }
 }

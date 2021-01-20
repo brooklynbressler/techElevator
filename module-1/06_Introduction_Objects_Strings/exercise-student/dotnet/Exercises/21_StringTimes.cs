@@ -10,7 +10,13 @@
         */
         public string StringTimes(string str, int n)
         {
-            return null;
+            string copyString = "";
+            for(int i = 0; i< n; i++)
+            {
+                copyString += str;
+
+            }
+            return copyString;
         }
     }
 }

@@ -11,7 +11,18 @@
         */
         public string StringYak(string str)
         {
-            return null;
+            int index = 0;
+            string answerString = str;
+            for (int i = 0; i < answerString.Length; i++)
+            {
+                if (answerString.Contains("yak"))
+                {
+                    index = answerString.IndexOf("yak");
+                    answerString = answerString.Remove(index, 3);
+                }
+            }
+               
+            return answerString;
         }
     }
 }

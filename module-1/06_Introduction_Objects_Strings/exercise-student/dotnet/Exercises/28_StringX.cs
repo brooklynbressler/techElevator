@@ -11,7 +11,21 @@
         */
         public string StringX(string str)
         {
-            return null;
+            string answerString = "";
+            string characterComparison = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if(i < str.Length)
+                {
+                    characterComparison = str.Substring(i, 1);
+                if (i == 0 || i == str.Length - 1 || characterComparison != "x")
+                    {
+                        answerString += str.Substring(i, 1);
+                    }
+                }
+                
+            }
+            return answerString;
         }
     }
 }

@@ -11,7 +11,24 @@
         */
         public int Last2(string str)
         {
-            return 0;
+            int outOfBoundsCheck = str.Length - 2;
+            int count = 0;
+            string comparisonString = "";
+            if (str.Length >= 4) {
+                string lastCompare = str.Substring(str.Length - 2);
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (i < outOfBoundsCheck)
+                    {
+                        comparisonString = str.Substring(i, 2);
+                        if (comparisonString == lastCompare)
+                        {
+                            count++;
+                        }
+                    }
+                }
+            }
+            return count;
         }
     }
 }

@@ -10,7 +10,19 @@
         */
         public bool DoubleX(string str)
         {
-            return false;
+            int outOfBoundsCheck = str.Length - 1;
+            int index = str.IndexOf('x');
+            bool flag = false;
+            string comparisonString = "";
+            if(index < str.Length - 1 && index >= 0)
+            {
+                comparisonString = str.Substring(index, 2);
+                if (comparisonString == "xx")
+                {
+                    flag = true;
+                }
+            }
+            return flag;
         }
     }
 }

@@ -11,7 +11,10 @@
         */
         public string Left2(string str)
         {
-            return null;
+            string firstTwoChars = str.Substring(0, 2);
+            string restOfString = str.Substring(2);
+            return (restOfString + firstTwoChars);
         }
+
     }
 }

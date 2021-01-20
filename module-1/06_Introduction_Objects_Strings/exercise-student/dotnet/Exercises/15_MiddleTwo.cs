@@ -11,7 +11,17 @@
         */
         public string MiddleTwo(string str)
         {
-            return null;
+            int startingPosition = (str.Length / 2) - 1;
+           
+            if (str.Length % 2 == 0)
+            {
+                string middleChars = str.Substring(startingPosition, 2);
+                return middleChars;
+            }
+            else
+            {
+                return "";
+            }
         }
     }
 }

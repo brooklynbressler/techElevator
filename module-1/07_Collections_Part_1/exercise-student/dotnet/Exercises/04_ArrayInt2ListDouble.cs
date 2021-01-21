@@ -12,7 +12,15 @@ namespace Exercises
         */
         public List<double> ArrayInt2ListDouble(int[] intArray)
         {
-            return null;
+            
+            List<int> newList = new List<int>(intArray);
+            List<double> newList2 = new List<double>();
+            foreach (int number in newList)
+            {
+                newList2.Add((double)number / 2);
+            }
+
+            return newList2;
         }
     }
 }

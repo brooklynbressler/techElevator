@@ -9,10 +9,19 @@ namespace Exercises
         OddOnly( {112, 201, 774, 92, 9, 83, 41872} ) -> [201, 9, 83]
         OddOnly( {1143, 555, 7, 1772, 9953, 643} ) -> [1143, 555, 7, 9953, 643]
         OddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
-        */
+        */ 
         public List<int> OddOnly(int[] integerArray)
         {
-            return null;
-        }
-    }
+            List<int> integerList = new List<int>(integerArray);
+            List<int> integerList2 = new List<int>();
+            foreach (int number in integerArray)
+            {
+                if(number % 2 != 0)
+                {
+                    integerList2.Add(number);
+                }
+            }
+            return integerList2;
+        } 
+    } 
 }

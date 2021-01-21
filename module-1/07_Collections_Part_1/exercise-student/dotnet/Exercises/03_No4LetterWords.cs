@@ -13,7 +13,18 @@ namespace Exercises
         */
         public List<string> No4LetterWords(string[] stringArray)
         {
-            return null;
+            List<string> newList = new List<string>(stringArray);
+
+            foreach (string word in stringArray)
+            {
+                if(word.Length == 4)
+                {
+                    newList.Remove(word);
+                }
+
+            }
+            
+            return newList;
         }
     }
 }

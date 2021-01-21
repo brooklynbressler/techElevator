@@ -15,7 +15,40 @@ namespace Exercises
         */
         public List<int> InterleaveLists(List<int> listOne, List<int> listTwo)
         {
-            return null;
+            int listOneOutOfBounds = listOne.Count - 1;
+            int listTwoOutOfBounds = listTwo.Count - 1;
+            var listThree = new List<int>();
+            if (listOne.Count >= listTwo.Count)
+            {
+                for (int i = 0; i < listOne.Count; i++)
+                {
+                    if (i <= listTwoOutOfBounds)
+                    {
+                        listThree.Add(listOne[i]);
+                        listThree.Add(listTwo[i]);
+                    }
+                    else
+                    {
+                        listThree.Add(listOne[i]);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < listTwo.Count; i++)
+                {
+                    if (i <= listOneOutOfBounds)
+                    {
+                        listThree.Add(listOne[i]);
+                        listThree.Add(listTwo[i]);
+                    }
+                    else
+                    {
+                        listThree.Add(listTwo[i]);
+                    }
+                }
+            }
+            return listThree;
         }
     }
 }

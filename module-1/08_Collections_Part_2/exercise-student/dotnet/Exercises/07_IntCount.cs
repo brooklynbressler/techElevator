@@ -17,7 +17,22 @@ namespace Exercises
          */
         public Dictionary<int, int> IntCount(int[] ints)
         {
-            return null;
+            Dictionary<int, int> howManyTimesIntAppears = new Dictionary<int, int>();
+            foreach (int number in ints)
+            {
+                if (howManyTimesIntAppears.TryGetValue(number, out int value))
+                {
+                    value = value + 1;
+                    howManyTimesIntAppears.Remove(number);
+                    howManyTimesIntAppears.Add(number, value);
+                }
+                else
+                {
+                    howManyTimesIntAppears.Add(number, 1);
+                }
+            }
+            return howManyTimesIntAppears;
+            
         }
     }
 }

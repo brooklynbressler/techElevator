@@ -15,7 +15,20 @@ namespace Exercises
          */
         public Dictionary<string, int> PeterPaulPartnership(Dictionary<string, int> peterPaul)
         {
-            return null;
+            int peterValue = peterPaul["Peter"];
+            int paulValue = peterPaul["Paul"];
+            int newPeterValue = (peterValue / 4);
+            int newPaulValue = (paulValue / 4);
+
+            if (peterValue >= 5000 && paulValue >= 10000)
+            {
+                peterPaul["Peter"] = peterValue - newPeterValue;
+                peterPaul["Paul"] = paulValue - newPaulValue;
+                peterPaul["PeterPaulPartnership"] = newPeterValue + newPaulValue;
+
+            }
+
+            return peterPaul;
         }
     }
 }

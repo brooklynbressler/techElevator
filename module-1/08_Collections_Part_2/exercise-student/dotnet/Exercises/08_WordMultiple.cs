@@ -15,7 +15,23 @@ namespace Exercises
          */
         public Dictionary<string, bool> WordMultiple(string[] words)
         {
-            return null;
+            Dictionary<string, bool> doesStringAppearTwice = new Dictionary<string, bool>();
+            
+            foreach (string word in words)
+            {
+                if (doesStringAppearTwice.TryGetValue(word, out bool value))
+                {
+                    value = true;
+                    doesStringAppearTwice.Remove(word);
+                    doesStringAppearTwice.Add(word, value);
+                }
+                else
+                {
+                    
+                    doesStringAppearTwice.Add(word, false);
+                }
+            }
+            return doesStringAppearTwice;
         }
     }
 }

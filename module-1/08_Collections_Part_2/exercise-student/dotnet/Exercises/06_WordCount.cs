@@ -18,7 +18,22 @@ namespace Exercises
          */
         public Dictionary<string, int> WordCount(string[] words)
         {
-            return null;
+            Dictionary<string, int> howManyTimesStringAppears = new Dictionary<string, int>();
+            
+            foreach (string word in words)
+            {
+                if (howManyTimesStringAppears.TryGetValue(word, out int value))
+                {
+                    value = value + 1;
+                    howManyTimesStringAppears.Remove(word);
+                    howManyTimesStringAppears.Add(word, value);
+                }
+                else
+                {
+                    howManyTimesStringAppears.Add(word, 1);
+                }
+            }
+            return howManyTimesStringAppears;
         }
     }
 }

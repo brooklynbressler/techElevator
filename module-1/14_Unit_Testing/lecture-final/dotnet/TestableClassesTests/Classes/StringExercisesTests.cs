@@ -3,7 +3,7 @@
 
 namespace TestableClasses.Classes.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class StringExercisesTests
     {
         //Assert

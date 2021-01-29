@@ -2,7 +2,7 @@
 
 namespace TestableClasses.Classes.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class LoopsAndArrayExercisesTests
     {
         //CollectionAssert

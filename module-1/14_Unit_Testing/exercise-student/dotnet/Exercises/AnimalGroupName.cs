@@ -24,12 +24,12 @@ namespace Exercises
          * Dog -> Pack
          * Crocodile -> Float
          *
-         * GetHerd("giraffe") → "Tower"
-         * GetHerd("") -> "unknown"
-         * GetHerd("walrus") -> "unknown"
-         * GetHerd("Rhino") -> "Crash"
-         * GetHerd("rhino") -> "Crash"
-         * GetHerd("elephants") -> "unknown"
+         //* GetHerd("giraffe") → "Tower"
+         //* GetHerd("") -> "unknown"
+         //* GetHerd("walrus") -> "unknown"
+         //* GetHerd("Rhino") -> "Crash"
+         //* GetHerd("rhino") -> "Crash"
+         //* GetHerd("elephants") -> "unknown"
          *
          */
         public string GetHerd(string animalName)

@@ -10,7 +10,10 @@
         {
             int[] portNumbers = { 80, 8080, 443 };
 
-            return 0;
+            int portNumbersLengthIndex = portNumbers.Length - 1;
+            int lastElement = portNumbers[portNumbersLengthIndex];
+
+            return lastElement;
         }
     }
 }

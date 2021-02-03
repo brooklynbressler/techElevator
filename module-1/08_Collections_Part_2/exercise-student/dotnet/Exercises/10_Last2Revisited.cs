@@ -21,7 +21,7 @@ namespace Exercises
          */
         public Dictionary<string, int> Last2Revisited(string[] words)
         {
-            //mondays homework #27
+            
             return null;
         }
     }

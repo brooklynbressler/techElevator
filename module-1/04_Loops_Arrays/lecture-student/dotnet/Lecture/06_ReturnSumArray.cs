@@ -8,10 +8,15 @@
         */
         public int ReturnSumArray()
         {
+            int sum = 0;                //0 1  2  3
             int[] arrayToLoopThrough = { 3, 4, 2, 9 };
+                   //init   boolean expression                  iterator
+            for (int i = 0; i < arrayToLoopThrough.Length; i++ )
+            {
+               sum = sum + arrayToLoopThrough[i];
+            }
 
-
-            return 0;
+            return sum;
         }
     }
 }

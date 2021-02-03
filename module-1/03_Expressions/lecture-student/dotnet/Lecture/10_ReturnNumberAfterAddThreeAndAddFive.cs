@@ -11,19 +11,23 @@
         */
         public int ReturnNumberAfterAddThreeAndAddFive(int number, bool addThree, bool addFive)
         {
-            if (true)
+
+            int output = number;
+
+            if (addThree)
             {
-                number = number + 3;
+                // output = output + 3
+                output += 3;
             }
 
             // Why can't we use an else here?
 
-            if (true)
+            if (addFive)
             {
-                number += 5;
+                output += 5;
             }
 
-            return number;
+            return output;
         }
     }
 }

@@ -8,16 +8,19 @@
         */
         public int ReturnFirstElementOfParam(int[] passedInArray)
         {
-            return 1;
+            int firstElement = passedInArray[0];
+            return firstElement;
         }
 
         /*
         4b. Set the first element in the array to 100.
             TOPIC: Setting Array Elements
         */
+        //return type is void, returns nothing//
         public void SetFirstElement(int[] passedInArray)
         {
-            return;
+            passedInArray[0] = 100;
+            return; //optional because void return type
         }
     }
 }

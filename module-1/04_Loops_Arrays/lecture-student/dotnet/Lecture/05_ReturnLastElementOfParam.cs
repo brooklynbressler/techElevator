@@ -9,7 +9,9 @@
         */
         public int ReturnLastElementOfParam(int[] passedInArray)
         {
-            return 1;
+            int arrayLength = passedInArray.Length - 1;
+            int lastElement = passedInArray[arrayLength];
+            return lastElement;
         }
 
         /*
@@ -18,16 +20,21 @@
         */
         public int ReturnSecondToLastElementOfParam(int[] passedInArray)
         {
-            return 1;
+            int arrayLength = passedInArray.Length - 2;
+            int lastElement = passedInArray[arrayLength];
+            return lastElement;
         }
 
         /*
         5c. Set the last element in the array to 100.
             TOPIC: Setting Array Elements
         */
+        //return type is void, returns nothing//
         public void SetLastElement(int[] passedInArray)
         {
-            return;
+            int indexOfLastElement = passedInArray.Length - 1;
+            passedInArray[indexOfLastElement] = 100;
+            return;//optional
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System;
 
 namespace SearchApplication.Search
 {
@@ -15,6 +16,9 @@ namespace SearchApplication.Search
 
 		/// <summary>
 		/// Create a Search Domain of a folder
+        
+
+
 		/// </summary>
 		/// <param name="folder">Path of folder to index</param>
         public SearchDomain(string folder)
@@ -28,7 +32,16 @@ namespace SearchApplication.Search
             IList<string> files = new List<string>();
             // Step Three: Complete the BuildDomain method
 
+            try
+            {
+                
+                files = new List<string>(Directory.GetFiles(Folder));
+            }
+            catch (Exception e)
+            {
 
+                throw new SearchDomainException(e.Message);
+            }
 
             return files;
         }

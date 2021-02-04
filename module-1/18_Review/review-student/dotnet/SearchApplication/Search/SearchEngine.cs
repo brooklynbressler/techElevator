@@ -18,7 +18,29 @@ namespace SearchApplication.Search
         public void IndexFiles()
         {
             // Step Five: Index files
+            IList<string> files = domain.Files;
 
+            for (int i = 0; i < files.Count; i++)
+            {
+
+                
+                using (StreamReader sd = new StreamReader(files[i]))
+                {
+
+                    while (!sd.EndOfStream)
+                    {
+                        
+                        string line = sd.ReadLine();
+
+                        IndexWords(i, line);
+
+                    }
+
+                }
+
+            }
+
+            TELog.Log(IndexedWordsToString());
 
         }
 
@@ -112,8 +134,8 @@ namespace SearchApplication.Search
                     }
                 }
             }
-		    return rankedFiles;
-	    }
+            return rankedFiles;
+        }
 
         private void IndexWords(int fileId, string line)
         {

@@ -9,26 +9,33 @@ namespace OpenAFile
         {
             Console.WriteLine("Enter Fully Qualified Path To a File");
 
-            string pathToFile = Console.ReadLine();
-            //once you have file open and reading working ok
-            pathToFile = @"C:\test\test.txt";
-            bool fileExist = File.Exists(pathToFile);
             
-
-            if (fileExist)
-            {
-                try
+            //once you have file open and reading working ok
+            // pathToFile = @"C:\test\test.txt";
+            bool fileExist = false;
+            while (!fileExist){
+                string pathToFile = Console.ReadLine();
+                fileExist = File.Exists(pathToFile);
+            
+                if (fileExist)
                 {
-
-                    using (StreamReader sr = new StreamReader(pathToFile))
+                    try
                     {
-                        ProcessLine(sr.ReadLine());
+
+                        using (StreamReader sr = new StreamReader(pathToFile))
+                        {
+                            ProcessLine(sr.ReadLine());
+                        }
                     }
-                }
-                catch (Exception e)
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("not good");
+                        //throw;
+                    }
+                } 
+                else
                 {
-                    Console.WriteLine("not good");
-                    //throw;
+                    Console.WriteLine("File not found, try again");
                 }
             }
         }

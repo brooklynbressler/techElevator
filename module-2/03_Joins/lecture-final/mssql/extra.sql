@@ -36,12 +36,12 @@ WHERE c.name = 'Horror' AND f.title LIKE 'F%';
 
 -- Who acted in what together?
 
-SELECT * 
+SELECT f.title, (actor1.first_name + ' ' + actor1.last_name) AS actor_one, actor2.first_name + ' ' + actor2.last_name
 FROM film f
-JOIN film_actor fa ON f.film_id = fa.film_id
-JOIN actor a ON fa.actor_id = a.actor_id
-
-;
+JOIN film_actor fa1 ON f.film_id = fa1.film_id
+JOIN film_actor fa2 ON f.film_id = fa2.film_id AND fa1.actor_id <> fa2.actor_id
+JOIN actor actor1 ON fa1.actor_id = actor1.actor_id
+JOIN actor actor2 ON fa2.actor_id = actor2.actor_id;
 
 -- How many times have two actors appeared together?
 

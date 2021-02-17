@@ -1,0 +1,10 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [employee_id]
+      ,[first_name]
+      ,[last_name]
+      ,[job_title]
+      ,[birth_date]
+      ,[gender]
+      ,[hire_date]
+      ,[department_id]
+  FROM [ProjectOrganizer].[dbo].[employee]

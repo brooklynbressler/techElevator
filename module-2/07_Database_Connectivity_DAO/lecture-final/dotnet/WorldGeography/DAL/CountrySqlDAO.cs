@@ -34,24 +34,14 @@ namespace WorldGeography.DAL
 
                     while (reader.Read())
                     {
-                        Country country = new Country();
-
-                        //convert allows for null values
-                        country.Code = Convert.ToString(reader["code"]);
-                        country.Name = Convert.ToString(reader["name"]);
-                        country.Continent = Convert.ToString(reader["continent"]);
-                        country.SurfaceArea = Convert.ToDouble(reader["surfacearea"]);
-                        country.Population = Convert.ToInt32(reader["population"]);
-                        country.GovernmentForm = Convert.ToString(reader["governmentform"]);
-
-                        countries.Add(country);
+                        countries.Add(countryFromReader(reader));
                     }
                 }
             } catch (Exception ex)
             {
                 //TODO dont couple with console
                 Console.WriteLine(ex.Message);
-            }
+            } 
 
             return countries;
         }
@@ -75,17 +65,7 @@ namespace WorldGeography.DAL
 
                     while (reader.Read())
                     {
-                        Country country = new Country();
-
-                        //convert allows for null values
-                        country.Code = Convert.ToString(reader["code"]);
-                        country.Name = Convert.ToString(reader["name"]);
-                        country.Continent = Convert.ToString(reader["continent"]);
-                        country.SurfaceArea = Convert.ToDouble(reader["surfacearea"]);
-                        country.Population = Convert.ToInt32(reader["population"]);
-                        country.GovernmentForm = Convert.ToString(reader["governmentform"]);
-
-                        countries.Add(country);
+                        countries.Add(countryFromReader(reader));
                     }
                 }
             }
@@ -96,6 +76,22 @@ namespace WorldGeography.DAL
             }
 
             return countries;
+        }
+
+        private Country countryFromReader(SqlDataReader reader)
+        {
+            Country country = new Country();
+
+            //convert allows for null values
+            country.Code = Convert.ToString(reader["code"]);
+            country.Name = Convert.ToString(reader["name"]);
+            country.Continent = Convert.ToString(reader["continent"]);
+            country.SurfaceArea = Convert.ToDouble(reader["surfacearea"]);
+            country.Population = Convert.ToInt32(reader["population"]);
+            country.GovernmentForm = Convert.ToString(reader["governmentform"]);
+
+            return country;
+
         }
 
     }

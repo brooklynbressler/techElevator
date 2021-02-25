@@ -27,8 +27,8 @@ namespace WorldGeography.DAL
                     conn.Open();
 
                     SqlCommand cmd = new SqlCommand("INSERT INTO city VALUES (@name, @countrycode, @district, @population);", conn);
-                    cmd.Parameters.AddWithValue("@name", city.CountryCode);
-                    cmd.Parameters.AddWithValue("@countrycode", city.Name);
+                    cmd.Parameters.AddWithValue("@name", city.Name);
+                    cmd.Parameters.AddWithValue("@countrycode", city.CountryCode);
                     cmd.Parameters.AddWithValue("@district", city.District);
                     cmd.Parameters.AddWithValue("@population", city.Population);
 

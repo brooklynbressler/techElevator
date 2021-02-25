@@ -86,7 +86,7 @@ namespace WorldGeography
                 userInput = Console.ReadLine();
                 numberOfAttempts++;
             }
-            while (numberOfAttempts >= 0);
+            while (string.IsNullOrEmpty(userInput));
 
             return userInput;
         }

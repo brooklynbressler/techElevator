@@ -20,7 +20,7 @@ namespace WorldGeography
             ILanguageDAO languageDAO = new LanguageSqlDAO(connectionString);
 
             WorldGeographyCLI cli = new WorldGeographyCLI(cityDAO, countryDAO, languageDAO);
-            //cli.RunCLI();
+            cli.RunCLI();
         }
     }
 }

@@ -57,11 +57,11 @@ namespace WorldGeography
                         break;
 
                     case Command_AddNewLanguage:
-                        RemoveLanguage();
+                        AddNewLanguage();
                         break;
 
                     case Command_RemoveLanguage:
-                        AddNewLanguage();
+                        RemoveLanguage();
                         break;
 
                     case Command_AddCity:
@@ -143,7 +143,7 @@ namespace WorldGeography
         {
             string continent = CLIHelper.GetString("Continent to filter by:");
 
-            IList<Country> northAmericanCountries = countryDAO.GetCountries();
+            IList<Country> northAmericanCountries = countryDAO.GetCountries(continent);
 
             Console.WriteLine();
             Console.WriteLine("All North American Countries");

@@ -145,15 +145,28 @@ namespace AuctionApp
             }
             else if (!response.IsSuccessful)
             {
-
+                if((int)response.StatusCode == 401)
+                {
+                    throw new UnauthorizedException("Sorry, you have not been granted access ):");
+                }
+                else if ((int)response.StatusCode == 403)
+                {
+                    throw new ForbiddenException("Sorry, you have been denied access by the server ):");
+                }
+                else
+                {
+                    throw new NonSuccessException((int)response.StatusCode);
+                }
             }
         }
 
         public API_User Login(string submittedName, string submittedPass)
         {
 
-
-            IRestResponse<API_User> response = null;
+            LoginUser loginUser = new LoginUser { Username = submittedName, Password = submittedPass };
+            RestRequest request = new RestRequest(API_BASE_URL + "login");
+            request.AddJsonBody(loginUser);
+            IRestResponse<API_User> response = client.Post<API_User>(request);
 
             if (response.ResponseStatus != ResponseStatus.Completed)
             {

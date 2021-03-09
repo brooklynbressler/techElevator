@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    font-family: 'RocknRoll One', sans-serif;
+    color: rgb(148, 24, 65);
+    background-color: rgb(82, 28, 133);
+}
+
+img{
+    height: 300px;
+    width: 800px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+footer{
+    font-size: x-large;
+}

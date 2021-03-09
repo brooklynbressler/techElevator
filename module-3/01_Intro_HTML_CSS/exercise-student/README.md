@@ -1,4 +1,4 @@
-# Introduction to HTML and CSS Exercises
+ # Introduction to HTML and CSS Exercises
 
 In this two-part exercise, you'll create:
 1. A fan page for something that you like. The fan page can be for your favorite movie or TV show, your favorite sports team, or your favorite band.

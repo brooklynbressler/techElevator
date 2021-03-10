@@ -15,3 +15,82 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+aside{
+  position: fixed;
+  width: 200px;
+  border-right: 1px solid rgb(62, 183, 240);
+  height: 100vh;
+}
+
+aside img{
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+aside li{
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(62, 183, 240);
+  margin: 10px auto;
+  padding-bottom: 10px 80%;
+  line-height: 2;
+}
+
+aside li a{
+  font-weight: bold;
+  color:rgb(62, 183, 240);
+  text-decoration: none;
+}
+
+:hover a{
+  text-decoration: underline;
+}
+
+main{
+  margin-left: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header{
+  height: 120px;
+}
+
+header img{
+  height: 80%;
+}
+
+.banner{
+  display: block;
+  width: 100%;
+}
+
+section div{
+  display: inline-block;
+  width: 33%;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+section h2{
+  color: rgb(104, 184, 104);
+
+}
+
+h2 i{
+  margin-right: 10px;
+}
+
+#what-we-do,
+#our-work{
+  border-right: 1px solid rgb(104, 184, 104);
+}
+
+#contact-us,
+#what-we-do,
+#our-work{
+  padding-left: 20px;
+}

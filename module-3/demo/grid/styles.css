@@ -2,7 +2,7 @@
     display: grid;
   
     grid-template-areas:
-      "header header header"
+      ". header ."
       "nav content side"
       "footer footer footer";
   
@@ -24,6 +24,7 @@
   
   main {
     grid-area: content;
+    background-color: chartreuse;
   }
   
   aside {

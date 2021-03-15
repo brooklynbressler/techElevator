@@ -38,8 +38,14 @@ li a:hover {
   text-decoration: underline;
 }
 
-.spacer {}
-
 .my-account img {
   width: 32px;
 }
+
+header, ul, .spacer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Best I could do */

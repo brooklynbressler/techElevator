@@ -18,7 +18,7 @@ In the header exercises, you'll align several navigation items.
 - `header/step-4`: Step one changes, and right align the user icon by setting `.spacer` to take up the rest of the available space.
 
 ## Step Two: Align flex items within a row
-
+ 
 In this exercise, you'll align several flex items within a row.
 
 ![Align Content Row Exercise](./align-content-row/align-content-row.png)

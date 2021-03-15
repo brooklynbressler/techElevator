@@ -17,3 +17,18 @@ body {
   text-align: center;
   border: solid 1px #777;
 }
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+div:nth-child(1),
+div:nth-child(4) {
+  flex-grow: 1;
+}
+div:nth-child(2),
+div:nth-child(3) {
+  flex-grow: 1;
+}

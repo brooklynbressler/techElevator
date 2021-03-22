@@ -1,5 +1,7 @@
 let allItemsIncomplete = true;
+
 const pageTitle = 'My Shopping List';
+
 const groceries = [
   { id: 1, name: 'Oatmeal', completed: false },
   { id: 2, name: 'Milk', completed: false },
@@ -18,7 +20,9 @@ const groceries = [
  * of the pageTitle variable that was set above.
  */
 function setPageTitle() {
+
   const title = document.getElementById('title');
+
   title.innerText = pageTitle;
 }
 
@@ -26,16 +30,91 @@ function setPageTitle() {
  * This function will loop over the array of groceries that was set above and add them to the DOM.
  */
 function displayGroceries() {
+
   const ul = document.querySelector('ul');
+
   groceries.forEach((item) => {
+
     const li = document.createElement('li');
+
     li.innerText = item.name;
+
     const checkCircle = document.createElement('i');
+
     checkCircle.setAttribute('class', 'far fa-check-circle');
+
     li.appendChild(checkCircle);
+
     ul.appendChild(li);
+
   });
 }
 
-setPageTitle();
-displayGroceries();
+// start of exercise
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  setPageTitle();
+
+  displayGroceries();
+
+  const groceries = document.querySelectorAll("li");
+
+  groceries.forEach(grocery => {
+
+    const shoppingList = document.querySelector("ul");
+
+    shoppingList.addEventListener("click", (e) => {
+
+      if(!e.target.classList.contains("completed")) {
+
+        e.target.classList.add("completed");
+      }
+
+    });
+  
+    grocery.addEventListener("dblclick", () => {
+
+      if(grocery.classList.contains("completed")) {
+
+        grocery.classList.remove("completed");
+
+      }
+
+    });
+  
+  });
+
+  const markAllComplete = document.getElementById("toggleAll");
+
+  markAllComplete.addEventListener('click', (e) => {
+
+    if(allItemsIncomplete) {
+
+      groceries.forEach(grocery => {
+        
+        grocery.classList.add("completed");
+
+        markAllComplete.innerText = "Mark All Incomplete";
+
+        allItemsIncomplete = false;
+
+      });
+
+    } else if(!allItemsIncomplete) {
+
+      groceries.forEach(grocery => {
+        
+        grocery.classList.remove("completed");
+
+        markAllComplete.innerText = "Mark All Complete";
+
+        allItemsIncomplete = true;
+
+      });
+
+    }
+
+  });
+
+});

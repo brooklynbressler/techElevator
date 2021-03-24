@@ -10,7 +10,7 @@ Run `npm install` before working on the project. After opening the project folde
 
 ## Step Two: Run unit tests
 
-There are unit tests located in `/tests/unit/UserList.spec.js` that you can run as you complete each task. To run the automated tests, run the command `npm run test:unit` from the terminal. There are **15** unit tests, and all of them fail before you begin writing any code.
+There are unit tests located in `/tests/unit/UserList.spec.j4s` that you can run as you complete each task. To run the automated tests, run the command `npm run test:unit` from the terminal. There are **15** unit tests, and all of them fail before you begin writing any code.
 
 ## Step Three: Display users
 

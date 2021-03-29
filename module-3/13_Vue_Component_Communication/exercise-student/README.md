@@ -80,6 +80,7 @@ The button that sets the status to read must have a `mark-read` class, and the b
 
 Once you complete this step, all tests under "Step Three Tests" pass.
 
+
 ![Mark read and unread buttons](etc/mark-buttons.png)
 
 ## Step Four: Add a `NewBookForm` component

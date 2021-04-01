@@ -1,19 +1,37 @@
 <template>
+<div>
   <div class="topic-list">
-    <div v-for="topic in topics" v-bind:key="topic.id" class="topic">
+    <div v-for="topic in topics" v-bind:key="topic.id" v-on:click="viewTopic(topic.id)" class="topic">
+      <router-link :to="{name: 'Messages', params:{id: topic.id}}">
       {{ topic.title }}
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
+import topicsService from "../services/TopicsService";
+
 export default {
   name: 'topic-list',
+  props: ["childComponentProp"],
   data() {
     return {
       topics: []
     }
-  }
+  },
+  methods: {
+
+    viewtopic(id) {
+      this.$router.push(`/topics/${id}`);
+    }
+
+  },
+  created() {
+    topicsService.list().then((response) => {
+      this.topics = response.data;
+    });
+  },
 }
 </script>
 

@@ -68,7 +68,7 @@ export default {
     return http.get('/docs');
   }
 
-}
+} 
 ```
 
 With the `DocsService` file in place, you need to use it inside of the document list component. Open up `/src/components/DocumentList.vue` and import the `DocsService` that you just created:

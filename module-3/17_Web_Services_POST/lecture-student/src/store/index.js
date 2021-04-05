@@ -28,6 +28,11 @@ export default new Vuex.Store({
       state.boards = state.boards.filter((board) => {
         return board.id !== boardIdToDelete;
       });
+    },
+    ADD_BOARD(state, boardToAdd) {
+
+      state.boards.push(boardToAdd);
+
     }
   },
   actions: {

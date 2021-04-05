@@ -11,7 +11,7 @@
       <button
         class="btn btn-cancel deleteBoard"
         v-if="!isLoading"
-        v-on:click="deleteBoard"
+        v-on:click="deleteBoard(this.boardId)"
       >Delete Board</button>
     </div>
     <div class="loading" v-if="isLoading">
@@ -66,8 +66,22 @@ export default {
           }
         });
     },
-    deleteBoard() {
+    deleteBoard(boardId) {
       
+      boardsService.deleteBoard(this.boardId).then((result) =>
+
+        {
+
+          if(result.status === 200) {
+
+            this.$store.commit("DELETE_BOARD", boardId);
+
+          }
+
+        }
+
+      )
+
     }
   },
   created() {
